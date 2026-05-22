@@ -34,10 +34,7 @@ venv.bak/
 # Project specifics
 logs/
 vector_store/
-data/
-!data/document_1.txt
-!data/document_2.txt
-!data/*.pdf
+
 
 # IDEs
 .idea/
