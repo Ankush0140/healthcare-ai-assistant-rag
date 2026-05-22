@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    volumes:
+      - ./data:/app/data
+      - ./vector_store:/app/vector_store
+      - ./config:/app/config
+      - ./logs:/app/logs
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - CHROMA_DB_DIR=/app/vector_store
+      - SLOTS_CONFIG_PATH=/app/config/slots.json
+      - INTENTS_CONFIG_PATH=/app/config/intents.json
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    # Note: Models need to be pulled manually or via a script after service starts
+    # e.g., docker exec -it healthcare-ai-assistant-ollama-1 ollama pull gemma:2b
+
+volumes:
+  ollama_data:

@@ -1,0 +1,16 @@
+{
+  "cardiology": {
+    "monday": ["10:00 AM", "2:00 PM"],
+    "tuesday": ["9:00 AM", "11:00 AM", "3:00 PM"],
+    "wednesday": ["10:00 AM"]
+  },
+  "neurology": {
+    "monday": ["1:00 PM", "4:00 PM"],
+    "tuesday": ["10:00 AM", "2:00 PM"],
+    "wednesday": ["9:00 AM", "3:00 PM"]
+  },
+  "orthopedics": {
+    "monday": ["11:00 AM", "3:00 PM"],
+    "tuesday": ["9:00 AM", "1:00 PM"]
+  }
+}
