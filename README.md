@@ -131,6 +131,20 @@ curl -X POST http://localhost:8000/ask \
 
 ---
 
+### 7. Frontend UI (Bonus)
+The application includes a simple, responsive web UI served directly by FastAPI from the `/static` directory. You can interact with the assistant via the browser instead of just the API.
+
+---
+
+## Demo Video & Screenshots
+
+  
+![Demo Video](media/demovideo.mp4)
+  
+![Frontend UI Screenshot](media/UI.jpeg)
+
+---
+
 ## Limitations and Future Improvements
 
 ### Limitations
