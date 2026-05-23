@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     # LLM (Local Ollama)
     ollama_base_url: str = "http://localhost:11434"
     ollama_model: str = "gemma:2b"
-    llm_timeout: int = 60
+    llm_timeout: int = 120
     llm_temperature: float = 0.1
 
     # Embeddings

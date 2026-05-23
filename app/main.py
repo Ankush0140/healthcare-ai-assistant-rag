@@ -83,13 +83,15 @@ async def serve_frontend():
 class AskRequest(BaseModel):
     question: str = Field(..., description="The user's question or command")
 
+from typing import Optional
+
 class AskResponse(BaseModel):
     intent: str
     answer: str
     confidence: float = 0.0
     sources: list = []
-    department: str = None
-    day: str = None
+    department: Optional[str] = None
+    day: Optional[str] = None
     available_slots: list = []
 
 # ==========================================
